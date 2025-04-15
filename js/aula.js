@@ -1,47 +1,49 @@
-let nome = "Matheus"
+let nome = "Rhuan";
 // alert(nome);
 console.log(nome);
 
 const x = 10;
-const lista = [1,2,3]
-const objeto = {name: "Matheus", age:51} //JSON
+const array = ["a", "b", "c"];
+const objeto = { name: "Rhuan", age: 23 }; //JSON
 
 console.log(x);
 console.log(typeof x);
-console.log('-----------------')
-console.log(lista)
-console.log(typeof lista)
-console.log('------------------')
-console.log(objeto)
-console.log(typeof objeto)
+console.log("------------------");
+console.log(array);
+console.log(typeof array);
+console.log("------------------");
+console.log(objeto);
+console.log(typeof objeto);
+console.log(objeto.name);
+console.log(array[2]);
 
-let valor = true // boleano
+let opcao = true; //boolean
+/*
+condicional
+....
+*/
 
 if (2 > 1) {
-    console.log("2 é maior que 1")
+  console.log("2 é maior que 1");
 } else {
-    console.log("2 não é maior que 1")
+  console.log("2 não é maior que 1");
 }
-//
-
-// Estrutura de repetição
+// Estrutra de repetição
 // i = i + 1
-const arr = ["amora", "banana", "caju", "damasco", "oloco", "nosfaa"];
-
-for (let i = 0; i < arr.length; i++){
-    console.log("O valor da repetição é " + arr[i])
-    // console.log('O valor da repetição é '+arr[i])
-    // template literal, é o uso da crase `
-    console.log(`O valor da repetição é ${arr[i]}`)
+const arr = ["amora", "banana", "caju", "damasco", "framboesa"];
+for (let i = 0; i < arr.length; i++) {
+  // console.log('O valor da repetição é '+ arr[i]);
+  // template literal, é o uso da crase `
+  console.log(`O valor da repetição é ${arr[i]}`);
 }
 
 //função
-function soma(){
-    console.log(22+11);
+function soma() {
+  console.log(22 + 11);
 }
+soma();
 
-function calcula(a,b){
-    console.log(a*b)
+function calcula(a, b) {
+  console.log(a * b);
 }
-
-calcula(12,12)
+calcula(12, 12);

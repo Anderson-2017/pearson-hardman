@@ -2,13 +2,9 @@
 const menuBtn = document.querySelector("#menu");
 const closemenuBtn = document.querySelector("#close-menu");
 const menu = document.querySelector("#mobile-navbar");
-const about = document.querySelector('#mobile-navbar [href="#about"]'); // Selecionar o link about
-const contact = document.querySelector('#mobile-navbar [href="#contact"]'); // Selecionar o link contact
-const header = document.querySelector('#mobile-navbar [href="#header"]'); // Selecionar o link header
-const team = document.querySelector('#mobile-navbar [href="#team"]'); // Selecionar o link team
-const expertise = document.querySelector(
-  '#mobile-navbar [href="#expertise-areas"]'
-); // Selecionar o link expertise
+
+//fechar o menu, após clicar na opção sobre
+const about = document.querySelector('#mobile-navbar [href="#about"]');
 
 // Selecionar os elementos dos slides
 const slides = document.querySelectorAll(".banner"); // Retorna um NodeList
@@ -35,19 +31,22 @@ function showSlides() {
 }
 
 // Ativar menu mobile
-menuBtn.addEventListener("click", (e) => {
-  menu.classList.add("menu-active");
+// menuBtn.addEventListener("click", (e) => {
+//   menu.classList.add("menu-active");
+// });
+
+// closemenuBtn.addEventListener("click", (e) => {
+//   menu.classList.remove("menu-active");
+// });
+
+[menuBtn, closemenuBtn].forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    menu.classList.toggle("menu-active");
+  });
 });
 
-// Desativar menu mobile
-closemenuBtn.addEventListener("click", (e) => {
-  menu.classList.remove("menu-active");
-});
-
-// Fechar menu ao clicar em um link
 about.addEventListener("click", (e) => {
   menu.classList.remove("menu-active");
 });
-
 // Inicialização do slides
 showSlides();
