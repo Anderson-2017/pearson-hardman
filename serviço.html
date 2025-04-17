@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link para o arquivo CSS externo para estilos -->
     <link rel="stylesheet" href="../css/style.css" />
     <title>Serviços</title>
+    <!-- Conexão com Google Fonts para carregar fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Link para os ícones do Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!-- Script JS que é carregado de forma assíncrona -->
     <script src="js/script.js" defer></script>
   </head>
   <body>
+    <!-- Cabeçalho da página -->
     <header id="header">
       <div id="inner-header">
+        <!-- Nome ou marca da empresa -->
         <h2 id="brand">Pearson Hardman</h2>
+        <!-- Menu de navegação para desktop -->
         <nav id="navbar">
           <a href="index.html">Início</a>
           <a href="serviço.html">Serviços</a>
@@ -28,6 +35,7 @@
           <a href="time.html">Time</a>
           <a href="contato.html">Contato</a>
         </nav>
+        <!-- Menu de navegação para dispositivos móveis (hamburguer) -->
         <i class="bi bi-list" id="menu"></i>
         <nav id="mobile-navbar">
           <i class="bi bi-x-lg" id="close-menu"></i>
@@ -38,6 +46,7 @@
           <a href="contato.html">Contato</a>
         </nav>
       </div>
+      <!-- Banners promocionais para mostrar diferentes mensagens -->
       <div class="banner active">
         <span class="square"></span>
         <h2>Melhores experts em direito do país</h2>
@@ -62,64 +71,69 @@
         <div class="dot"></div>
       </div>
     </header>
+
+    <!-- Seção de áreas de atuação da empresa -->
     <main id="expertise-areas" class="text-image-section">
-        <div id="expertise-information" class="text-container">
-          <h3 class="section-title">Áreas de atuação</h3>
-          <p class="section-subtitle">
-            Nossos especialistas podem ajudar você em Direito Civil, Ambiental e
-            Empresarial.
-          </p>
-          <a href="#" class="btn">Saiba Mais</a>
-        </div>
-        <div id="expertise-image-container" class="image-container">
-          <i class="bi bi-people"></i>
-          <img
-            src="../images/employees_banner.jpg"
-            alt="Advogados da Pearson Hardman"
-          />
-        </div>
-        <div id="other-services">
-          <div class="service">
-            <img src="../images/bank.jpg" alt="Banco" />
-            <i class="bi bi-bank"></i>
-            <div class="service-info">
-              <h4>Bancos e finanças pessoais</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
-                libero, soluta quod veniam pariatur labore deserunt explicabo
-                assumenda amet officia.
-              </p>
-            </div>
-          </div>
-          <div class="service">
-            <img src="../images/construction.jpg" alt="Construção" />
-            <i class="bi bi-bricks"></i>
-            <div class="service-info">
-              <h4>Construção de imóveis sem escritura</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
-                libero, soluta quod veniam pariatur labore deserunt explicabo
-                assumenda amet officia.
-              </p>
-            </div>
-          </div>
-          <div class="service">
-            <img src="../images/company.jpg" alt="Empresa" />
-            <i class="bi bi-building"></i>
-            <div class="service-info">
-              <h4>Empresas e funcionários</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
-                libero, soluta quod veniam pariatur labore deserunt explicabo
-                assumenda amet officia.
-              </p>
-            </div>
+      <div id="expertise-information" class="text-container">
+        <h3 class="section-title">Áreas de atuação</h3>
+        <p class="section-subtitle">
+          Nossos especialistas podem ajudar você em Direito Civil, Ambiental e
+          Empresarial.
+        </p>
+        <a href="#" class="btn">Saiba Mais</a>
+      </div>
+      <div id="expertise-image-container" class="image-container">
+        <i class="bi bi-people"></i>
+        <img
+          src="../images/employees_banner.jpg"
+          alt="Advogados da Pearson Hardman"
+        />
+      </div>
+      <!-- Outros serviços que a empresa oferece -->
+      <div id="other-services">
+        <div class="service">
+          <img src="../images/bank.jpg" alt="Banco" />
+          <i class="bi bi-bank"></i>
+          <div class="service-info">
+            <h4>Bancos e finanças pessoais</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+              ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
+              libero, soluta quod veniam pariatur labore deserunt explicabo
+              assumenda amet officia.
+            </p>
           </div>
         </div>
-      </main>
+        <div class="service">
+          <img src="../images/construction.jpg" alt="Construção" />
+          <i class="bi bi-bricks"></i>
+          <div class="service-info">
+            <h4>Construção de imóveis sem escritura</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+              ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
+              libero, soluta quod veniam pariatur labore deserunt explicabo
+              assumenda amet officia.
+            </p>
+          </div>
+        </div>
+        <div class="service">
+          <img src="../images/company.jpg" alt="Empresa" />
+          <i class="bi bi-building"></i>
+          <div class="service-info">
+            <h4>Empresas e funcionários</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+              ipsa ab porro velit eum ipsam, distinctio adipisci nihil saepe
+              libero, soluta quod veniam pariatur labore deserunt explicabo
+              assumenda amet officia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rodapé da página com informações de contato e links -->
     <footer id="footer">
       <div class="contact-info">
         <div class="footer-brand">
@@ -139,6 +153,7 @@
           </div>
         </div>
       </div>
+      <!-- Links de outros serviços oferecidos pela empresa -->
       <div class="links-container">
         <h4>Outros serviços</h4>
         <nav>
@@ -148,6 +163,7 @@
           <a href="#">Processos</a>
         </nav>
       </div>
+      <!-- Links adicionais sobre a empresa -->
       <div class="links-container">
         <h4>Páginas</h4>
         <nav>
@@ -157,6 +173,7 @@
           <a href="#">FAQ</a>
         </nav>
       </div>
+      <!-- Seção para consulta grátis -->
       <div class="links-container">
         <h4>Consulta grátis</h4>
         <div class="phone-number">

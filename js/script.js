@@ -1,53 +1,88 @@
-// Selecionando elementos do menu Mobile
+//  Selecionando os elementos do meu mobile
 const menuBtn = document.querySelector("#menu");
-const closemenuBtn = document.querySelector("#close-menu");
+const closeMenuBtn = document.querySelector("#close-menu");
 const menu = document.querySelector("#mobile-navbar");
-const about = document.querySelector('#mobile-navbar [href="#about"]'); // Selecionar o link about
-const contact = document.querySelector('#mobile-navbar [href="#contact"]'); // Selecionar o link contact
-const header = document.querySelector('#mobile-navbar [href="#header"]'); // Selecionar o link header
-const team = document.querySelector('#mobile-navbar [href="#team"]'); // Selecionar o link team
-const expertise = document.querySelector(
-  '#mobile-navbar [href="#expertise-areas"]'
-); // Selecionar o link expertise
 
-// Selecionar os elementos dos slides
-const slides = document.querySelectorAll(".banner"); // Retorna um NodeList
-const dots = document.querySelectorAll(".dot"); // Retorna um NodeList
+// Fechar o menu
+const about = document.querySelector('#mobile-navbar [href="#about"]');
+const header = document.querySelector('#mobile-navbar [href="#header"]');
+const expertiseareas = document.querySelector(
+  '#mobile-navbar [href="#expertise-areas"]'
+);
+const team = document.querySelector('#mobile-navbar [href="#team"]');
+const contact = document.querySelector('#mobile-navbar [href="#contact"]');
+
+// selecionar os elementos dos slides
+const slides = document.querySelectorAll(".banner");
+//
+const dots = document.querySelectorAll(".dot");
 // variavel de controle
 let slideIndex = 1;
 
 function showSlides() {
-  // console.log(slides)
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
     dots[i].classList.remove("active");
   }
 
-  slideIndex++; // Incrementa o slideIndex
+  slideIndex++; // avançando a variavel
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-
+  console.log(slideIndex);
+  console.log(slides[slideIndex - 1]);
   slides[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].classList.add("active");
 
-  setTimeout(showSlides, 3000); // Change image every 3 seconds
+  setTimeout(showSlides, 3000);
 }
 
-// Ativar menu mobile
-menuBtn.addEventListener("click", (e) => {
-  menu.classList.add("menu-active");
+// ativar menu-mobile
+
+[menuBtn, closeMenuBtn].forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    menu.classList.toggle("menu-active");
+  });
 });
 
-// Desativar menu mobile
-closemenuBtn.addEventListener("click", (e) => {
-  menu.classList.remove("menu-active");
-});
+// menuBtn.addEventListener("click", (e) => {
+//   menu.classList.add("menu-active");
+// });
 
-// Fechar menu ao clicar em um link
+// closeMenuBtn.addEventListener("click", (e) => {
+//   menu.classList.remove("menu-active");
+// });
+
+// fechar o menu
 about.addEventListener("click", (e) => {
   menu.classList.remove("menu-active");
 });
 
-// Inicialização do slides
+header.addEventListener("click", (e) => {
+  menu.classList.remove("menu-active");
+});
+
+expertiseareas.addEventListener("click", (e) => {
+  menu.classList.remove("menu-active");
+});
+
+team.addEventListener("click", (e) => {
+  menu.classList.remove("menu-active");
+});
+
+contact.addEventListener("click", (e) => {
+  menu.classList.remove("menu-active");
+});
+
+//Inicialização
 showSlides();
+
+// DOM
+// Navegar no documento html
+// const brand = document.querySelector("#brand");
+// console.log(brand)
+// brand.addEventListener('click', function(event){
+//     // console.log("testando o click");
+//     // console.log(event.target)
+//     event.target.style.color ="blue";
+// })
